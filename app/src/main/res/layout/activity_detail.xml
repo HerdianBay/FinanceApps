@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <Button
+        android:id="@+id/printButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/print" />
+
+    <TableLayout
+        android:id="@+id/tableAnggaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/printButton"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/white"
+        android:divider="@color/black"
+        android:showDividers="middle">
+
+        <!--Heading-->
+        <TableRow
+            android:id="@+id/tableHead"
+            android:background="@color/head">
+
+            <TextView
+                android:id="@+id/tableHeadTanggal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/coldate"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tableHeadKet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/colnote"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tableHeadType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/type"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tableHeadNominal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/nominal"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </TableRow>
+
+        <!--Data Column-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/budgetData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/layout_detail_anggaran"
+            />
+
+<!--        <TableRow-->
+<!--            android:id="@+id/tableData"-->
+<!--            android:background="@color/white">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/dataTanggal"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="4"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:padding="10sp"-->
+<!--                android:text="@string/date"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="12sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/dataKet"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="4"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:padding="10sp"-->
+<!--                android:text="@string/information"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="12sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/dataMasuk"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="4"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:padding="10sp"-->
+<!--                android:text="@string/empty"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="12sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/dataKeluar"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="4"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:padding="10sp"-->
+<!--                android:text="@string/fund"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="12sp" />-->
+
+<!--        </TableRow>-->
+
+    </TableLayout>
+
+
+    <TextView
+        android:id="@+id/titleAnggaranIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableAnggaran"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/totalBudget" />
+
+    <TextView
+        android:id="@+id/danaMasuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_below="@+id/tableAnggaran"
+        android:layout_marginTop="44dp"
+        android:layout_toEndOf="@+id/titleAnggaranIn"
+        android:text="@string/incomingFunds"/>
+
+    <TextView
+        android:id="@+id/titleAnggaranOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleAnggaranIn"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/totalBudgetOut" />
+
+    <TextView
+        android:id="@+id/danaKeluar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_below="@+id/titleAnggaranIn"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/titleAnggaranIn"
+        android:text="@string/outflows" />
+
+    <TextView
+        android:id="@+id/titleAnggaranTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleAnggaranOut"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/remainingBudget" />
+
+    <TextView
+        android:id="@+id/danaSisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_below="@+id/titleAnggaranOut"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/titleAnggaranIn"
+        android:text="@string/remainingFunds" />
+
+    <Button
+        android:id="@+id/addDataButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleAnggaranTotal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center"
+        android:text="@string/addData" />
+
+</RelativeLayout>

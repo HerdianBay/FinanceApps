@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Proyek Akhir</string>
+    <string name="print">Cetak</string>
+    <string name="coldate">Tanggal</string>
+    <string name="colnote">Keterangan</string>
+    <string name="colin">Masuk</string>
+    <string name="colout">Keluar</string>
+    <string name="colsum">Total</string>
+    <string name="rowdate">Tanggal</string>
+    <string name="rownote">Keterangan</string>
+    <string name="rowin">Masuk</string>
+    <string name="rowout">Keluar</string>
+    <string name="rowsum">Total</string>
+    <string name="date">1 Juni 2023</string>
+    <string name="information">Konsumsi</string>
+    <string name="empty">-</string>
+    <string name="fund">1000000</string>
+    <string name="totalBudget">Total Anggaran Masuk</string>
+    <string name="incomingFunds">Rp 8.785.000,00</string>
+    <string name="totalBudgetOut">Total Anggaran Keluar</string>
+    <string name="outflows">Rp 8.784.000,00</string>
+    <string name="remainingBudget">Sisa Anggaran</string>
+    <string name="remainingFunds">Rp 1.000,00</string>
+    <string name="addData">Tambah Data</string>
+    <string name="type">Jenis</string>
+    <string name="income">Pemasukan</string>
+    <string name="outcome">Pengeluaran</string>
+    <string name="nominal">Nominal</string>
+    <string name="save">Simpan</string>
+    <string name="budgetTitle">Judul Anggaran</string>
+    <string name="grafik">Grafik</string>
+    <string name="addButton">Add</string>
+    <string name="deleteButton">Delete Button</string>
+    <string name="updateButton">Update Button</string>
+</resources>
