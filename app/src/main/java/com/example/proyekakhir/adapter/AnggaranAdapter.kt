@@ -22,8 +22,7 @@ class AnggaranAdapter(private val listData : List<DataItem>, private val budgetL
         holder.binding.apply {
             //binding into view and use click listener to go to detail activity
             tvNamaAnggaran.text = data.namaKelompok
-            tvTotalAnggaranKeluar.text= "0"
-            tvTotalAnggaranMasuk.text = "0"
+            description.text = data.deskripsi
         }
         holder.binding.apply {
             updateButton.setOnClickListener {

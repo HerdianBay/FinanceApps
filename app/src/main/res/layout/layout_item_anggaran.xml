@@ -37,38 +37,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="24dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_totalAnggaranMasuk"
+                    android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="@string/totalBudget"
+                    android:text="@string/description"
+                    android:textSize="24sp"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:textStyle="" />
-
-                <TextView
-                    android:id="@+id/tv_totalAnggaranKeluar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="@string/totalBudgetOut"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:textStyle="" />
-
-                <TextView
-                    android:id="@+id/tv_sisaAnggaran"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/remainingBudget"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"/>
+                    android:textAlignment="textStart"/>
             </LinearLayout>
 
             <ImageView

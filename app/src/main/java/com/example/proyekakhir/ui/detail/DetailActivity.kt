@@ -53,7 +53,7 @@ class DetailActivity : AppCompatActivity(), BudgetDetailListener {
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            filePdfOutput = File(storageVolume.directory?.path.toString() + "/Download/coba.pdf")
+            filePdfOutput = File(storageVolume.directory?.path.toString() + "/Download/RekapAnggaranFinance.pdf")
         }
 
         id = intent.getIntExtra(MainActivity.ID, 0)
@@ -91,8 +91,6 @@ class DetailActivity : AppCompatActivity(), BudgetDetailListener {
             val page = pdfDocument.startPage(pageInfo)
             val canvas = page.canvas
 
-            canvas.save()
-
             titlePaint.textAlign = Paint.Align.CENTER
             titlePaint.textSize = 70F
             canvas.drawText("Rekap Anggaran Perusahaan", binding.relativeLayout.width/2F, 270F, titlePaint)
@@ -103,9 +101,9 @@ class DetailActivity : AppCompatActivity(), BudgetDetailListener {
             pdfDocument.finishPage(page)
             pdfDocument.writeTo(FileOutputStream(filePdfOutput, false))
 
-            canvas.restore()
-
             pdfDocument.close()
+
+            Toast.makeText(this@DetailActivity, "Rekap Anggaran Berhasil Di Simpan Pada Direktori Download", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -13,7 +13,7 @@
         android:layout_marginStart="280dp"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="@string/print" />
+        android:text="@string/save" />
 
     <TableLayout
         android:id="@+id/tableAnggaran"
